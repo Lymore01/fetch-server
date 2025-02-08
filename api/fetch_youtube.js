@@ -7,7 +7,7 @@ export default async (req, res) => {
       return res.status(401).json({ error: "Unauthorized" });
     }
 
-    // Get parameters from query string
+    // parameters from query string
     const { channelId, maxResults = 50 } = req.query;
 
     // Fetch from YouTube API
