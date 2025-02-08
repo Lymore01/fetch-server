@@ -2,7 +2,6 @@ import axios from "axios";
 
 export default async (req, res) => {
   try {
-    // Simple authentication check
     const authToken = req.headers.authorization;
     if (!authToken || authToken !== process.env.AUTH_TOKEN) {
       return res.status(401).json({ error: "Unauthorized" });
